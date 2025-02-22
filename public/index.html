@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiTab</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Multitab</h1>
+    <input type="text" id="url" placeholder="Enter URL">
+    <input type="number" id="numTabs" placeholder="Enter Number of Tabs">
+    <button id="openTabs">Open Tabs</button>
+    <button id="stopTabs">Stop Tabs</button>
+
+    <h2 id="activeTabs">Active Tabs: 0</h2>
+    <div id="logContainer"></div>
+    
+    <footer id="footer"></footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let enc = "JmNvcHk7IDIwMjUgQ3ZhR3JvdXBzLiBBbGwgUmlnaHRzIFJlc2VydmVkLg==";
+        let decoded = atob(enc);
+        document.getElementById("footer").innerHTML = `<p style="text-align:center; padding:10px; color:#666; font-size:14px;">${decoded}</p>`;
+    });
+</script>
+
+</body>
+</html>
